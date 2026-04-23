@@ -1,0 +1,76 @@
+/* 去除默认的样式 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 标题样式 */
+h1 {
+  font-weight: 100;
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* 游戏区域样式 */
+.game {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  /* 这里之所以使用相对定位，是为了回头子元素绝对定位 */
+  position: relative;
+  user-select: none;
+  /* outline: 1px solid red; */
+}
+
+/* 游戏区域每一个小方块 */
+.item {
+  width: 200px;
+  height: 200px;
+  background: url("../img/ace.jpg");
+  background-size: 600px;
+  box-shadow: 0 0 5px #000;
+  transform: scale(0.95);
+  border-radius: 10px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+/* 卡片的编号 */
+.cardNo {
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: aqua;
+  font-size: 150px;
+  color: aliceblue;
+  line-height: 200px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+/* 下方控制面板样式 */
+.panel {
+  width: 600px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+
+.panel > button {
+  margin: 0 5px;
+  width: 50px;
+  height: 26px;
+  border: none;
+  font-size: 12px;
+  color: rgb(82, 82, 82);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 计时器 */
+.panel > p {
+  font-weight: 100;
+  margin-left: 20px;
+}
